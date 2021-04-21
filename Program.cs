@@ -31,8 +31,8 @@ public class OurListFamousNewMexicoPersons
         // Create a list of parts.
         List<FamousPerson> NMpeople = new List<FamousPerson>();
 
-        // Add parts to the list.
-        Console.WriteLine("List of famous New Mexico Persons");
+        // Add names & info.
+        Console.WriteLine("Famous New Mexico Persons");
         NMpeople.Add(new FamousPerson() { FamousPersonName = "Carlos Condit(born 1984) – born in Albuquerque, UFC fighter", FamousPersonId = 1 });
         NMpeople.Add(new FamousPerson() { FamousPersonName = "Bob Foster (born 1938) – born in Albuquerque, light-heavyweight boxer, world champion", FamousPersonId = 2 });
         NMpeople.Add(new FamousPerson() { FamousPersonName = "Holly Holm (born 1981) – born in Albuquerque, boxer/mixed martial fighter", FamousPersonId = 3 });
@@ -53,20 +53,32 @@ public class OurListFamousNewMexicoPersons
         // This will remove person 3,
 
         NMpeople.Remove(new FamousPerson() { FamousPersonId = 3, FamousPersonName = "Holly Holm" });
-        
-        NMpeople.RemoveAt(3);
+        NMpeople.Remove(new FamousPerson() { FamousPersonId = 4, FamousPersonName = "Diego Sanchez" });
+        NMpeople.Remove(new FamousPerson() { FamousPersonId = 5, FamousPersonName = "NPH" });
+        NMpeople.Remove(new FamousPerson() { FamousPersonId = 6, FamousPersonName = "AR" });
 
-        Console.WriteLine("\nremove Holly Holm\n");
-        foreach (FamousPerson afamousPerson in NMpeople)
-        {
-            Console.WriteLine(afamousPerson);
-            
-        }
-        Console.WriteLine("");
-        NMpeople.Count();
+
+        //NMpeople.RemoveAt(3);
+        //NMpeople.RemoveAt(4);
+
+        Console.WriteLine("\nremove Holly Holm, Diego Sanchez\n");
         foreach (FamousPerson afamousPerson in NMpeople)
         {
             Console.WriteLine(afamousPerson);
         }
+      
+               
+        Console.WriteLine("\ntCapacity: {0}", NMpeople.Capacity);
+        Console.WriteLine("Count: {0}", NMpeople.Count);
+        NMpeople.TrimExcess();
+        Console.WriteLine("\nTrimExcess()");
+        Console.WriteLine("Capacity: {0}", NMpeople.Capacity);
+        Console.WriteLine("Count: {0}", NMpeople.Count);
+
+        NMpeople.Clear();
+        Console.WriteLine("\nClear()");
+        Console.WriteLine("Capacity: {0}", NMpeople.Capacity);
+        Console.WriteLine("Count: {0}", NMpeople.Count);
+
     }
 }
