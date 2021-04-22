@@ -121,12 +121,23 @@ public class OurListFamousNewMexicoPersons
         OurListFamousNewMexicoPersons ourListFamousNewMexicoPersons = new OurListFamousNewMexicoPersons();
         OurListFamousNewMexicoPersons obj = ourListFamousNewMexicoPersons;
         Console.WriteLine("obj.add 2 ints:\n");
-        obj.add(33, 66);
+        obj.add(333, 111);
         Console.WriteLine("obj.add 2 strings:\n");
         obj.add($"C. Condit(born 1984), Albuquerque, UFC fighter", "\nJ. Tapia (1967 - 2012 1991), Albuquerque, boxer");
-        Console.WriteLine("\nPress any key to exit.");
+        Console.WriteLine("\n+++++++++++Press any key to overload using the SubMethod+++++++++++++");
+        //Console.ReadLine();
+        Console.Clear();
+        //Console.ReadKey();
+        Console.WriteLine("\n+++++++++OverLoad '-' operator: subtract custom list class instance from another instance++++++++++\n");
+        int myNum1 = SubMethod(8, 5);
+        double myNum2 = SubMethod(4.3, 6.26);
+        Console.WriteLine("Using'SubMethod(int x, int y/ return x - y;)' on an 'int'");
         Console.ReadLine();
-        Console.ReadKey();
+        Console.WriteLine("Int: 8 - 5 = " + myNum1);
+        Console.WriteLine("++++++++++++++++++++++++++++++++++\n");
+        Console.WriteLine("Using'SubMethod(int x, int y/ return x - y;)' on an 'double'");
+        Console.ReadLine();
+        Console.WriteLine("Double: 4.3 - 6.26 = " + myNum2);
     }
     public void add(int a, int b)
     {
@@ -138,7 +149,18 @@ public class OurListFamousNewMexicoPersons
     {
         Console.WriteLine(s1 + s2);
     }
+    static int SubMethod(int x, int y)
+    {
+        
+        return x - y;
+        
+    }
 
+    static double SubMethod(double x, double y)
+    {
+        
+        return x - y;
+    }
 }
 
 
