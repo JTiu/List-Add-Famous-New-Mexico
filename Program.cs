@@ -117,11 +117,12 @@ public class OurListFamousNewMexicoPersons
             $"index[0]:  { intCollection[0]} \nindex[1]:  { intCollection[1]}\nindex[2]:  { intCollection[2]}\nindex[3]:  { intCollection[3]}");
 
         Console.WriteLine($"\nprint index at [3] {intCollection[3]}");
-        Console.WriteLine("\n+++++++++++++++++++++++++++++++++++++++++++++OverLoad+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        Console.WriteLine("\n+++++OverLoad the + operator: add two instances of the custom list class together.++++++++++\n");
         OurListFamousNewMexicoPersons ourListFamousNewMexicoPersons = new OurListFamousNewMexicoPersons();
         OurListFamousNewMexicoPersons obj = ourListFamousNewMexicoPersons;
+        Console.WriteLine("obj.add 2 ints:\n");
         obj.add(33, 66);
-
+        Console.WriteLine("obj.add 2 strings:\n");
         obj.add($"C. Condit(born 1984), Albuquerque, UFC fighter", "\nJ. Tapia (1967 - 2012 1991), Albuquerque, boxer");
         Console.WriteLine("\nPress any key to exit.");
         Console.ReadLine();
@@ -129,7 +130,7 @@ public class OurListFamousNewMexicoPersons
     }
     public void add(int a, int b)
     {
-        Console.WriteLine($"adding {a} + {b} = {a + b}");
+        Console.WriteLine($"{a} + {b} = {a + b}");
         Console.ReadLine();
     }
 
