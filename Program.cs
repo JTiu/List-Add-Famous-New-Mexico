@@ -32,9 +32,11 @@ public class FamousPerson : IEquatable<FamousPerson>
 
 public class OurListFamousNewMexicoPersons
 {
+   
     public static void Main()
     {
-              
+       
+
         List<FamousPerson> NMpeople = new List<FamousPerson>();
 
         // Add names & info.
@@ -67,13 +69,12 @@ public class OurListFamousNewMexicoPersons
         //NMpeople.RemoveAt(3);
         //NMpeople.RemoveAt(4);
 
-        Console.WriteLine("\nRemove an object from an instance of my custom-built list class by imitating the C# Remove():\n\nRemove Holly Holm, Diego Sanchez, N. P. Harris, Andre Roberson, then print remainder\n");
+        Console.WriteLine("\nRemove an object from an instance of my class with C# Remove():\n\nRemove Holly Holm, Diego Sanchez, N. P. Harris, Andre Roberson, then print remainder\n");
         foreach (FamousPerson afamousPerson in NMpeople)
         {
             Console.WriteLine(afamousPerson);
         }
       
-               
         Console.WriteLine("\nCheck tCapacity: {0}", NMpeople.Capacity);
         Console.WriteLine("Check Count: {0}", NMpeople.Count);
         NMpeople.TrimExcess();
@@ -85,10 +86,10 @@ public class OurListFamousNewMexicoPersons
         Console.WriteLine("\nClear()");
         Console.WriteLine("Capacity: {0}", NMpeople.Capacity);
         Console.WriteLine("Count: {0}", NMpeople.Count);
-        Console.WriteLine("\n++++++++++++++++++++++++++++++++++++++++++++++++");
+        Console.WriteLine("\n+++++++++++++++++++++++Next indexing a string collection+++++++++++++++++++++++++");
         Console.ReadLine();
         Console.Clear();
-        Console.WriteLine("\nNow indexing a string collection\n");
+       
         var stringCollection = new SampleCollection<string>();
         stringCollection[0] = "C. Condit(born 1984), Albuquerque, UFC fighter";
         stringCollection[1] = "B. Foster (born 1938), Albuquerque, light-heavyweight boxer, world champion";
@@ -102,8 +103,9 @@ public class OurListFamousNewMexicoPersons
         Console.WriteLine($"Show entire string index:  \n\n" +
             $"index[0]:  { stringCollection[0]} \nindex[1]:  { stringCollection[1]}\nindex[2]:  { stringCollection[2]}\nindex[3]:  { stringCollection[3]}\nindex[4]:  { stringCollection[4]}\nindex[5]:  { stringCollection[5]}\nindex[6]:  { stringCollection[6]}\nindex[7]:  { stringCollection[7]}");
         Console.WriteLine($"\nprint string index at [3] {stringCollection[3]}");
-        Console.WriteLine("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        Console.WriteLine("\nNow indexing an int collection\n");
+        
+        Console.WriteLine("\n+++++++++++++++++++++++++++++++++Now indexing an int collection++++++++++++++++++++++++++++++++++++++++");
+        
         Console.ReadLine();
         Console.Clear();
         var intCollection = new SampleCollection<int>();
@@ -115,7 +117,25 @@ public class OurListFamousNewMexicoPersons
             $"index[0]:  { intCollection[0]} \nindex[1]:  { intCollection[1]}\nindex[2]:  { intCollection[2]}\nindex[3]:  { intCollection[3]}");
 
         Console.WriteLine($"\nprint index at [3] {intCollection[3]}");
+        Console.WriteLine("\n+++++++++++++++++++++++++++++++++++++++++++++OverLoad+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        OurListFamousNewMexicoPersons ourListFamousNewMexicoPersons = new OurListFamousNewMexicoPersons();
+        OurListFamousNewMexicoPersons obj = ourListFamousNewMexicoPersons;
+        obj.add(33, 66);
 
+        obj.add($"C. Condit(born 1984), Albuquerque, UFC fighter", "\nJ. Tapia (1967 - 2012 1991), Albuquerque, boxer");
+        Console.WriteLine("\nPress any key to exit.");
+        Console.ReadLine();
+        Console.ReadKey();
+    }
+    public void add(int a, int b)
+    {
+        Console.WriteLine($"adding {a} + {b} = {a + b}");
+        Console.ReadLine();
+    }
+
+    public void add(string s1, string s2)
+    {
+        Console.WriteLine(s1 + s2);
     }
 
 }
