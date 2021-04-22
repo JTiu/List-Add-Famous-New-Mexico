@@ -69,7 +69,7 @@ public class OurListFamousNewMexicoPersons
         //NMpeople.RemoveAt(3);
         //NMpeople.RemoveAt(4);
 
-        Console.WriteLine("\nRemove an object from an instance of my class with C# Remove():\n\nRemove Holly Holm, Diego Sanchez, N. P. Harris, Andre Roberson, then print remainder\n");
+        Console.WriteLine("\nRemove an object from an instance of the class:\n\nRemove 'Holly Holm, Diego Sanchez, N. P. Harris, Andre Roberson',... then print remainder of list\n");
         foreach (FamousPerson afamousPerson in NMpeople)
         {
             Console.WriteLine(afamousPerson);
@@ -144,7 +144,7 @@ public class OurListFamousNewMexicoPersons
         {
             // Two source arrays.
             var array1 = new string[] { "blue", "red", "green" };
-            var array2 = new string[] { "sky", "sunset", "lawn" };
+            var array2 = new string[] { "sky", "sunset", "cactus" };
 
             // Concatenate elements at each position together.
             var zip = array1.Zip(array2, (a, b) => (a + "=" + b));
@@ -154,7 +154,19 @@ public class OurListFamousNewMexicoPersons
                 Console.WriteLine("ZIP: {0}", value);
             }
         }
+        Console.WriteLine("++++++++++++++++++++++++++++++++++\n");
+        Console.WriteLine("\n++++++++++++++++Make this list iterable using IEnumerable+++++++++++++};");
+        {
 
+            // Storing the elements of GetMyList
+            IEnumerable<string> my_slist = GetMyList();
+
+            // Display the elements return from iteration
+            foreach (var i in my_slist)
+            {
+                Console.WriteLine(i);
+            }
+        }
     }
     public void add(int a, int b)
     {
@@ -178,7 +190,22 @@ public class OurListFamousNewMexicoPersons
         
         return x - y;
     }
+    public static IEnumerable<string> GetMyList()
+    {
+        // Creating and adding elements in list
+        List<string> my_list = new List<string>() {
+                     "Roswell", "Las Cruces", "Albuquerque", "Santa Fe" };
 
+
+        // Iterating the elements of my_list
+        foreach (var items in my_list)
+        {
+            // Returning the element after every iteration
+            yield return items;
+        }
+
+        Console.WriteLine("The End\nThank you!");
+    }
 
 }
 
