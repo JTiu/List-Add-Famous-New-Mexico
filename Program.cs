@@ -1,4 +1,5 @@
-﻿using System;
+﻿using List__Add__Famous_New_Mexico;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -79,6 +80,20 @@ public class OurListFamousNewMexicoPersons
         Console.WriteLine("\nClear()");
         Console.WriteLine("Capacity: {0}", NMpeople.Capacity);
         Console.WriteLine("Count: {0}", NMpeople.Count);
+        Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++");
+        Console.ReadLine();
+        Console.Clear();
+        Console.WriteLine("Now indexing a string collection\n");
+        var stringCollection = new SampleCollection<string>();
+        stringCollection[0] = "C. Condit(born 1984), Albuquerque, UFC fighter";
+        stringCollection[1] = "B. Foster (born 1938), Albuquerque, light-heavyweight boxer, world champion";
+        stringCollection[2] = "H. Holm (born 1981), Albuquerque, boxer/mixed martial fighter";
+        stringCollection[3] = "D. Sanchez (born 1981), in Albuquerque, UFC fighter";
+        stringCollection[4] = "N. Patrick Harris (born 1973), actor: How I Met Your Mother/Doogie Howser, M.D.";
+        stringCollection[5] = "A. Roberson (born 1991), Las Cruces, NBA player";
+        stringCollection[6] = "J. Tapia (1967 - 2012 1991), Albuquerque, boxer";
+        stringCollection[7] = "O. Lynn Lacy (born June 10, 1982), Gamerco, Miss New Mexico USA 2006 title";
 
+        Console.WriteLine($"index[0]:  { stringCollection[0]} \nindex[1]:  { stringCollection[1]}\nindex[2]:  { stringCollection[2]}\nindex[3]:  { stringCollection[3]}\nindex[4]:  { stringCollection[4]}\nindex[5]:  { stringCollection[5]}\nindex[6]:  { stringCollection[6]}\nindex[7]:  { stringCollection[7]}");
     }
 }
