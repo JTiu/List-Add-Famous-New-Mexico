@@ -138,6 +138,23 @@ public class OurListFamousNewMexicoPersons
         Console.WriteLine("Using'SubMethod(int x, int y/ return x - y;)' on an 'double'");
         Console.ReadLine();
         Console.WriteLine("Double: 4.3 - 6.26 = " + myNum2);
+        Console.WriteLine("++++++++++++++++++++++++++++++++++\n");
+        Console.WriteLine("\nUsing'Zip method on two arrays: \n\n'var array1 = new string[] { 'blue', 'red', 'green'}; \nAND \nvar array2 = new string[] { 'sky', 'sunset', 'lawn' };");
+
+        {
+            // Two source arrays.
+            var array1 = new string[] { "blue", "red", "green" };
+            var array2 = new string[] { "sky", "sunset", "lawn" };
+
+            // Concatenate elements at each position together.
+            var zip = array1.Zip(array2, (a, b) => (a + "=" + b));
+            Console.WriteLine();
+            foreach (var value in zip)
+            {
+                Console.WriteLine("ZIP: {0}", value);
+            }
+        }
+
     }
     public void add(int a, int b)
     {
@@ -161,6 +178,8 @@ public class OurListFamousNewMexicoPersons
         
         return x - y;
     }
+
+
 }
 
 
